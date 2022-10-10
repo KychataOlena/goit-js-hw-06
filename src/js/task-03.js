@@ -13,17 +13,12 @@ const images = [
   },
 ];
 
-const names = images.map((image) => {
-  const itemEl = document.createElement("li");
-  itemEl.classList.add("item");
-  const imgEl = document.createElement('img')
-  imgEl.src = image.url;
-  imgEl.alt = image.alt;
-  imgEl.style.width = '250px';
-  itemEl.appendChild(imgEl);
-  return itemEl;
-});
+const names = images.map(({url, alt}) => {
+return `<li><img src="${url}" alt="${alt}" width = '200' ></li>`;
+
+
+})
+  .join(" ");
+
 const navListEl = document.querySelector(".gallery");
-navListEl.append(...names);
- navListEl.style.display = "flex";
-console.log(navListEl)
+navListEl.insertAdjacentHTML("beforeend", `${names}`);
