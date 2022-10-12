@@ -4,7 +4,7 @@ const inputRef = document.querySelector('#validation-input');
 
 const onInputBlur = (event) => {
     const requiredLength = Number(event.target.dataset.length);
-    if (event.currentTarget.value.length >= requiredLength) {
+    if (event.currentTarget.value.length === requiredLength) {
         changeClass('valid', 'invalid', event.target);
 
     }

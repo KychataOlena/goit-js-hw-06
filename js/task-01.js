@@ -9,9 +9,3 @@ itemEl.forEach((item) => {
      console.log(`Elements:  ${elements}`);
 });
 
-// const namberOfcategory = document.querySelectorAll('.item')
-// console.log(namberOfcategory.length)
-
-// const titleOfcategory = document.querySelector('h2');
-// console.log(titleOfcategory);
-
