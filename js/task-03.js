@@ -14,11 +14,11 @@ const images = [
 ];
 
 const names = images.map(({url, alt}) => {
-return `<li><img src="${url}" alt="${alt}" width = '200' ></li>`;
+return `<li><img src="${url}" alt="${alt}" width = '200'></li>`;
 
 
 })
   .join(" ");
 
 const navListEl = document.querySelector(".gallery");
-navListEl.insertAdjacentHTML("beforeend", `${names}`);
+navListEl.insertAdjacentHTML("beforeend", names);
